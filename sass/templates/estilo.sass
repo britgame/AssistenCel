@@ -1,0 +1,393 @@
+header
+	//margin-top: 20px
+	//+clearfix
+	.espaco
+		height: 20px
+	.cabecario
+		height: 70px
+	.logo
+		float: left
+		width: 100px
+		img
+			width: 180px
+			height: auto
+	
+
+	.menu
+		float: right
+		margin-top: 40px
+		
+		ul
+			margin-right: -15px
+			li
+				display: inline-block // para ficar um do lado do outro 
+				margin: 0 25px 0 0
+
+				a
+					color: $cinza
+					text-transform: uppercase
+
+					&:hover
+						color: $verde
+						&:after
+							width: 100%
+					
+					&:after
+						content: ""
+						display: block
+						width: 0%
+						height: 2px
+						background-color: $verde
+						+transition(.3s)
+
+		.menu-itens
+			+breakpoint($tablet)
+				display: none
+
+		.busca
+			margin-top: -33px
+			float: right
+			position: relative // isso coloca a lupa por cima das outras divs
+
+			a
+				color: $verde
+				font-size: 17px
+				display: block
+
+			+breakpoint($tablet)
+				float: left
+
+		.campo
+			input
+				width: 1px
+				border: 0
+				+transition(.3s)
+		
+		.campo-ativo
+			margin-right: 10px
+			input
+				width: 250px
+				+border-radius(5px)
+				background-color: #f4f4f4
+
+				
+
+.slide // SLIDER
+	background:
+		image: url('../images/img_slide_topo.jpg')
+		position: top center
+		size: cover
+		attachment: fixed 
+	height: 675px
+	padding: 20% // PRA BAIXAR O H1 QUE NO MARGIN DA PAU
+	
+	h1
+		border: 2px solid $branco
+		border-radius: (120px)
+		background-color: rgba(255,255,255,0.4)
+		display: table // para div ajustar ao texto
+		margin: auto
+		//opacity: 0.3
+		a
+			color: $verde
+			display: block
+			text-transform: uppercase
+			padding: 5px 15px
+			text-align: center
+			font-size: 40px
+			opacity: none
+
+.faixa
+	background-color: $verde
+	height: 40px
+
+
+.sobre // SOBRE
+	.img
+		width: 100%
+		height: 400px
+		background: 
+			image: url('../images/img_sobre_bckgd.jpg')
+			position: top center
+		
+		margin-bottom: 50px
+		padding-top: 200px
+
+		.gradient
+			height: 200px
+			padding-top: 110px
+			margin-bottom: -30px
+			//margin-top: 250px -- DA PAU!!!!!
+			background: 
+				image: url('../images/gradient_sobre.png')
+			
+			h2
+				text-transform: uppercase
+				color: $verde
+				margin-left: 140px
+				font-size: 35px
+
+				+breakpoint($celular)
+					margin-left: 20px
+
+.texto
+	margin: 40px 0 70px
+
+
+.SL_sobre ///* PAGINA EXTRA SOBRE P/ APRENDIZADO */
+	background:
+		image: url('../images/img_slide_topo.jpg')
+		position: top center
+		size: cover
+		attachment: fixed 
+	height: 400px
+	h1
+		border: 2px solid $branco
+		border-radius: (120px)
+		background-color: rgba(255,255,255,0.4)
+		display: table // para div ajustar ao texto
+		margin: auto
+		//opacity: 0.3
+		a
+			color: $verde
+			display: block
+			text-transform: uppercase
+			padding: 5px 15px
+			text-align: center
+			font-size: 40px
+			opacity: none
+
+
+.espec // ESPECIALIZAÇÃO
+	margin: 40px 0 40px 0
+
+	h2
+	  text-transform: uppercase
+	  color: $verde
+
+	.itens
+		margin: 50px 0
+
+		ul
+			+flexbox
+			+align-items(center)
+			+justify-content(space-around)
+
+			a
+				width: 160px 
+				height: 160px
+				display: block
+				background-color: $verde
+				+border-radius(120px)
+				text-align: center
+				line-height: 150px
+				font-size: 80px
+				color: $preto
+				&:hover,
+				&:focus
+					color: $verde
+					background-color: $cinza-claro
+
+				+breakpoint($celular)
+					width: 100px 
+					height: 100px
+					font-size: 50px
+					line-height: 100px
+					
+	p
+		color: $cinza
+		text-align: center
+		margin-bottom: 50px
+
+	.quadro_espec
+		background-color: $verde
+		padding: 30px
+		margin-bottom: 20px
+
+		h2
+			color: $branco
+			text-transform: uppercase
+			font-weight: bold
+			text-align: center
+			font-size: 50px
+		
+		h3
+			color: $branco
+			text-align: center
+
+		img
+			color: $branco
+			width: 150px
+			height: auto
+			float: left
+			margin: -20px 40px 0 0
+
+		.texto2
+			margin: 4% 0 3% 0
+			color: $branco
+
+
+.contato // CONTATO
+
+	h2
+	  text-transform: uppercase
+	  color: $verde
+
+	ul
+		text-align: center
+		+flexbox
+		+align-items(center)
+		+justify-content(space-around)
+		li
+			display: inline-block
+			margin: 40px 0
+			i
+				color: $verde
+				font-size: 40px
+			p
+				color: $cinza
+				font-size: 13px
+				a
+					color: $cinza
+				strong
+					font-size: 15px
+
+		+breakpoint($tablet)
+			display: block
+			li
+				display: block
+
+
+.form
+	width: 48%
+	float: left
+
+	+breakpoint($tablet)
+		float: none
+		width: 100%
+
+
+	p
+		padding: 7px
+		color: $cinza
+
+		i
+			color: $preto
+
+	button
+		width: 100%
+		background-color: $verde
+		border: 0
+		color: $branco
+		height: 40px
+		text-transform: uppercase
+
+		&:hover
+			background-color: $cinza-claro
+			color: $verde
+			+transition(.3s)
+
+.localizacao
+	width: 48%
+	float: right
+
+	+breakpoint($tablet)
+		float: none
+		height: 400px
+		margin-top: 50px
+		.map_mobile
+			left: 0
+			position: absolute
+			width: 100%
+
+
+	iframe
+		width: 100%
+		height: 350px
+
+
+footer
+	background-color: $verde
+	padding: 40px
+	+breakpoint($celular)
+		padding: 10px
+
+	.logo-rodape
+		+breakpoint($celular)
+			float: left
+		
+	.sociais
+		text-align: center
+		margin-top: -50px
+
+		+breakpoint($celular)
+			margin-top: 0
+			text-align: right
+
+
+		li
+			display: inline-block
+			margin: 5px
+
+			a
+				color: $branco
+				border: 1px solid $branco
+				padding: 5px
+				text-align: center
+				display: block
+				+border-radius(120px)
+				width: 40px
+				height: 40px
+				line-height: 25px
+				font-size: 20px
+				&:hover
+					background-color: $branco
+					color: $verde
+
+	.copy
+		margin-top: -50px
+
+		+breakpoint($celular)
+			margin-top: 0
+
+		p
+			color: $branco
+			font-size: 11px
+			text-align: right
+
+				
+	
+	.bt-top // Botão ir para o TOPO
+		display: none
+		bottom: 0
+		right: 0
+		z-index: 9999
+		position: fixed
+		background-color: $verde
+		float: right
+		margin: 0 50px 50px 0
+		+border-radius(8px)
+		opacity: 0.5
+		font-size: 40px
+		text-align: center
+
+		a
+			width: 45px
+			height: 45px
+			display: block
+			color: $branco
+			line-height: 35px
+			&:hover
+				color: $branco
+
+		+transition(.3s)
+		&:hover
+			opacity: 1;
+
+		+breakpoint($celular)
+			margin: 0 20px 20px 0
+			font-size: 30px
+			a
+				width: 30px
+				height: 30px
+				line-height: 0
